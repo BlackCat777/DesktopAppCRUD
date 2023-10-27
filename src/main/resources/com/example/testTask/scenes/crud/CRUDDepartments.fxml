@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<SplitPane dividerPositions="0.28754676643506144" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="394.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testTask.scenes.CRUDDepartmentsScene">
+    <AnchorPane maxWidth="180.0" minHeight="250.0" minWidth="180.0" prefHeight="0.0" prefWidth="0.0">
+        <GridPane layoutX="-1.0" layoutY="-1.0" prefHeight="218.0" prefWidth="212.0" style="-fx-background-color: gray;">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="97.60001220703126" minWidth="10.0" prefWidth="69.59998168945313" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.79999008178712" minWidth="10.0" prefWidth="123.20001831054688" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="64.20000305175782" minHeight="10.0" prefHeight="63.4" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="79.2000030517578" minHeight="10.0" prefHeight="49.000000000000014" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="73.6" minHeight="10.0" prefHeight="64.39999694824218" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <TextField fx:id="fieldDepartment" GridPane.columnIndex="1" />
+            <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField prefHeight="19.0" prefWidth="71.0" text="Отдел:" />
+            <TextField text="Email:" GridPane.rowIndex="2" />
+            <Button fx:id="addDepartmentButton" mnemonicParsing="false" onAction="#addDepartmentClick" text="Добавить" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#goToUpdateNavigation" text="Назад" GridPane.rowIndex="3" />
+            <TextField text="Телефон:" GridPane.rowIndex="1" />
+            <TextField fx:id="phoneField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        </GridPane>
+    </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="393.0" prefWidth="518.0">
+        <TableView fx:id="departmentTable" prefHeight="217.0" prefWidth="529.0">
+            <columns>
+            <TableColumn fx:id="iD_Department" prefWidth="57.59997481107712" text="ID" />
+                <TableColumn fx:id="departmentColumn" prefWidth="225.6000099182129" text="Отдел" />
+                <TableColumn fx:id="phoneColumn" prefWidth="128.7999725341797" text="Телефон" />
+            <TableColumn fx:id="emailColumn" prefWidth="128.7999725341797" text="Email" />
+            </columns>
+        </TableView>
+        <HBox layoutY="218.0" prefHeight="100.0" prefWidth="530.0" style="-fx-spacing: 15;">
+            <Button mnemonicParsing="false" onAction="#updateStr" prefHeight="26.0" prefWidth="250.0"
+                    text="Редактировать запись"/>
+            <Button mnemonicParsing="false" onAction="#deleteStr" prefHeight="26.0" prefWidth="267.0"
+                    text="Удалить запись"/>
+        </HBox>
+    </AnchorPane>
+</SplitPane>

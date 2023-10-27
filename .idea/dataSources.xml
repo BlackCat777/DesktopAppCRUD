@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="EmployeeRecords" uuid="619597f1-5ec5-4766-b774-66b5979fe9c4">
+      <driver-ref>firebird</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.firebirdsql.jdbc.FBDriver</jdbc-driver>
+      <jdbc-url>jdbc:firebirdsql://localhost:3050/$PROJECT_DIR$/src/main/resources/EMPLOYEERECORDS.FDB</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>
